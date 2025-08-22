@@ -1,88 +1,140 @@
-a test
+not changelog test
 .
 This is the input Markdown test,
 then below add the expected output.
+
+- a [reference][]
+- b [0.0.1]
+* c [1.0.0]
+
+[unused reference]: https://example.com
+[0.0.1]: https://example.com
+[reference]: https://example.com
+[1.0.0]: https://example.com
 .
 This is the input Markdown test,
 then below add the expected output.
+
+- a [reference]
+- b [0.0.1]
+
+* c [1.0.0]
+
+[0.0.1]: https://example.com
+[1.0.0]: https://example.com
+[reference]: https://example.com
 .
 
-another test
-.
-Some *markdown*
-
-- a
-- b
-* c
-.
-Some *markdown*
-
-- a
-- b
-
-* c
-.
-
-table test
-.
-| Month    | Savings |
-| -------- | ------- |
-| January  | $250    |
-| February | $80     |
-| March    | $420    |
-.
-| Month | Savings |
-| -------- | ------- |
-| January | $250 |
-| February | $80 |
-| March | $420 |
-.
-
-real test
+correct changelog test
 .
 # Changelog
 
-add your syntax here
+## [10.1.0] - 2025-01-01
 
-## [5.4.0] - 2025-04-14
+## [2.10.0] - 2025-01-01
 
-- asd
-- sda
+## [2.0.0] - 2025-01-01
 
-## [5.3.2] - 2025-03-31
+## [1.0.10] - 2025-01-01
 
-## [5.3.1] - 2025-02-17
+## [1.0.0] - 2025-01-01
 
-## [5.3.0] - 2025-02-05
+## [0.0.10] - 2025-01-01
 
-## [5.2.1] - 2025-01-10
+## [0.0.2] - 2025-01-01
 
-[5.2.1]: https://gitlab.com/ska-telescope/sdp/ska-sdp-lmc-queue-connector/-/releases/5.2.1
-[5.3.0]: https://gitlab.com/ska-telescope/sdp/ska-sdp-lmc-queue-connector/-/releases/5.3.0
-[5.3.1]: https://gitlab.com/ska-telescope/sdp/ska-sdp-lmc-queue-connector/-/releases/5.3.1
-[5.3.2]: https://gitlab.com/ska-telescope/sdp/ska-sdp-lmc-queue-connector/-/releases/5.3.2
-[5.4.0]: https://gitlab.com/ska-telescope/sdp/ska-sdp-lmc-queue-connector/-/releases/5.4.0
+## [0.0.1] - 2025-01-01
+
+[10.1.0]: https://example.com
+[2.10.0]: https://example.com
+[2.0.0]: https://example.com
+[1.0.10]: https://example.com
+[1.0.0]: https://example.com
+[0.0.10]: https://example.com
+[0.0.2]: https://example.com
+[0.0.1]: https://example.com
 .
 # Changelog
 
-add your syntax here
+## [10.1.0] - 2025-01-01
 
-## [5.4.0] - 2025-04-14
+## [2.10.0] - 2025-01-01
 
-- asd
-- sda
+## [2.0.0] - 2025-01-01
 
-## [5.3.2] - 2025-03-31
+## [1.0.10] - 2025-01-01
 
-## [5.3.1] - 2025-02-17
+## [1.0.0] - 2025-01-01
 
-## [5.3.0] - 2025-02-05
+## [0.0.10] - 2025-01-01
 
-## [5.2.1] - 2025-01-10
+## [0.0.2] - 2025-01-01
 
-[5.4.0]: https://gitlab.com/ska-telescope/sdp/ska-sdp-lmc-queue-connector/-/releases/5.4.0
-[5.3.2]: https://gitlab.com/ska-telescope/sdp/ska-sdp-lmc-queue-connector/-/releases/5.3.2
-[5.3.1]: https://gitlab.com/ska-telescope/sdp/ska-sdp-lmc-queue-connector/-/releases/5.3.1
-[5.3.0]: https://gitlab.com/ska-telescope/sdp/ska-sdp-lmc-queue-connector/-/releases/5.3.0
-[5.2.1]: https://gitlab.com/ska-telescope/sdp/ska-sdp-lmc-queue-connector/-/releases/5.2.1
+## [0.0.1] - 2025-01-01
+
+[10.1.0]: https://example.com
+[2.10.0]: https://example.com
+[2.0.0]: https://example.com
+[1.0.10]: https://example.com
+[1.0.0]: https://example.com
+[0.0.10]: https://example.com
+[0.0.2]: https://example.com
+[0.0.1]: https://example.com
+.
+
+unsorted changelog test
+.
+# Changelog
+
+## [10.1.0] - 2025-01-01
+
+## [2.0.0] - 2025-01-01
+
+## [2.10.0] - 2025-01-01
+
+## [1.0.10] - 2025-01-01
+
+## [1.0.0] - 2025-01-01
+
+## [0.0.10] - 2025-01-01
+
+## [0.0.2] - 2025-01-01
+
+## [0.0.1] - 2025-01-01
+
+[0.0.1]: https://example.com
+[0.0.2]: https://example.com
+[0.0.10]: https://example.com
+[1.0.0]: https://example.com
+[1.0.10]: https://example.com
+[2.0.0]: https://example.com
+[2.10.0]: https://example.com
+[10.1.0]: https://example.com
+.
+# Changelog
+
+## [10.1.0] - 2025-01-01
+
+## [2.0.0] - 2025-01-01
+
+## [2.10.0] - 2025-01-01
+
+## [1.0.10] - 2025-01-01
+
+## [1.0.0] - 2025-01-01
+
+## [0.0.10] - 2025-01-01
+
+## [0.0.2] - 2025-01-01
+
+## [0.0.1] - 2025-01-01
+
+[10.1.0]: https://example.com
+[2.10.0]: https://example.com
+[2.0.0]: https://example.com
+[1.0.10]: https://example.com
+[1.0.0]: https://example.com
+[0.0.10]: https://example.com
+[0.0.2]: https://example.com
+[0.0.1]: https://example.com
 .
