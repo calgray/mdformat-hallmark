@@ -103,7 +103,7 @@ class HallmarkLinksExtension(ParserExtensionInterface):
             if ref.get("title"):
                 line += f' "{ref["title"]}"'
             out.append(line)
-        return "\n".join(out)
+        return "\n\n".join(out)
 
     RENDERERS = {"hallmark_refs": _render_hallmark_refs}
     CHANGES_AST = True

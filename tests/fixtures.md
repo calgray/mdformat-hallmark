@@ -46,12 +46,19 @@ correct changelog test
 ## [0.0.1] - 2025-01-01
 
 [10.1.0]: https://example.com
+
 [2.10.0]: https://example.com
+
 [2.0.0]: https://example.com
+
 [1.0.10]: https://example.com
+
 [1.0.0]: https://example.com
+
 [0.0.10]: https://example.com
+
 [0.0.2]: https://example.com
+
 [0.0.1]: https://example.com
 .
 # Changelog
@@ -73,12 +80,19 @@ correct changelog test
 ## [0.0.1] - 2025-01-01
 
 [10.1.0]: https://example.com
+
 [2.10.0]: https://example.com
+
 [2.0.0]: https://example.com
+
 [1.0.10]: https://example.com
+
 [1.0.0]: https://example.com
+
 [0.0.10]: https://example.com
+
 [0.0.2]: https://example.com
+
 [0.0.1]: https://example.com
 .
 
@@ -130,11 +144,18 @@ unsorted changelog test
 ## [0.0.1] - 2025-01-01
 
 [10.1.0]: https://example.com
+
 [2.10.0]: https://example.com
+
 [2.0.0]: https://example.com
+
 [1.0.10]: https://example.com
+
 [1.0.0]: https://example.com
+
 [0.0.10]: https://example.com
+
 [0.0.2]: https://example.com
+
 [0.0.1]: https://example.com
 .
