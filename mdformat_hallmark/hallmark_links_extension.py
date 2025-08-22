@@ -20,12 +20,6 @@ class SemverReference:
     href: str
     title: str | None
 
-    def __str__(self):
-        line = f"[{self.label}]: {self.href}"
-        if self.title:
-            line += f' "{self.title}"'
-        return line
-
 
 def _extract_semver_references(src: str) -> tuple[list[SemverReference], str]:
     refs: list[SemverReference] = []

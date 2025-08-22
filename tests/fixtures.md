@@ -159,3 +159,48 @@ unsorted changelog test
 
 [0.0.1]: https://example.com
 .
+
+
+extra links changelog test
+.
+# Changelog
+
+## [1.0.0] - 2025-01-01
+
+### Added
+
+- Commit [JIRA-2]
+
+## [1.1.0] - 2025-01-01
+
+### Added
+
+- Commit [JIRA-1]
+
+[JIRA-2]: https://example.com
+[JIRA-1]: https://example.com
+
+[2.10.0]: https://example.com
+[10.1.0]: https://example.com
+.
+# Changelog
+
+## [1.0.0] - 2025-01-01
+
+### Added
+
+- Commit [JIRA-2]
+
+## [1.1.0] - 2025-01-01
+
+### Added
+
+- Commit [JIRA-1]
+
+[10.1.0]: https://example.com
+
+[2.10.0]: https://example.com
+
+[jira-1]: https://example.com
+[jira-2]: https://example.com
+.

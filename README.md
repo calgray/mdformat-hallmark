@@ -1,10 +1,34 @@
 # mdformat-hallmark
 
 [![Build Status](https://github.com/calgray/mdformat-hallmark/actions/workflows/tests.yml/badge.svg?branch=master)](<https://github.com/calgray/mdformat-hallmark/actions?query=workflow%3ATests+branch%3Amaster+event%3Apush>)
-[![codecov.io](https://codecov.io/gh/calgray/mdformat-hallmark/branch/main/graph/badge.svg)](https://codecov.io/gh/xarray-contrib/astropy-xarray)
+[![codecov.io](https://codecov.io/gh/calgray/mdformat-hallmark/branch/master/graph/badge.svg)](https://codecov.io/gh/calgray/mdformat-hallmark)
 [![PyPI version](https://badge.fury.io/py/mdformat-hallmark.svg)](<https://badge.fury.io/py/mdformat-hallmark>)
 
-An [mdformat](https://github.com/executablebooks/mdformat) plugin for compatibility with [hallmark](https://github.com/vweevers/hallmark) formatted Markdown and [Common Changelog](https://common-changelog.org/).
+An [mdformat](https://github.com/executablebooks/mdformat) plugin for compatibility with [hallmark](https://github.com/vweevers/hallmark) formatted Markdown and [Common Changelog](https://common-changelog.org/) that allows both formatters and linters to simultaneously pass for quality assurance.
+
+## Features
+
+- `hallmark` style reference formatting for changelogs with blank lines and sort by semantic version.
+
+## Install
+
+Install with:
+
+```sh
+pip install mdformat-hallmark
+```
+
+## CLI Usage
+
+After installing the plugin, run `mdformat` for Markdown files including Common Changelog files.
+
+```sh
+# with extension detected automatically
+mdformat README.md CHANGELOG.md
+
+# with extension explicitly required
+mdformat --extensions hallmark README.md CHANGELOG.md
+```
 
 ## Development
 

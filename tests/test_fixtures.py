@@ -13,5 +13,4 @@ fixtures = read_fixture_file(FIXTURE_PATH)
 )
 def test_fixtures(line, title, text, expected):
     output = mdformat.text(text, extensions={"hallmark"})
-    # output = mdformat.text(text, codeformatters={"python"})
     assert output.rstrip() == expected.rstrip(), output
