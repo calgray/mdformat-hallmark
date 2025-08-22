@@ -1,18 +1,20 @@
-from markdown_it import MarkdownIt
-from mdformat.renderer import RenderTreeNode, RenderContext
-from mdformat.plugins import ParserExtensionInterface
-from markdown_it.token import Token
 import re
+
+from markdown_it import MarkdownIt
+from markdown_it.token import Token
+from mdformat.plugins import ParserExtensionInterface
+from mdformat.renderer import RenderContext, RenderTreeNode
 
 
 class HallmarkLinksExtension(ParserExtensionInterface):
     """
-    mdformat plugin extension to format references used by versions and 
+    mdformat plugin extension to format references used by versions and
     renders sorted by semantic-version order.
     """
+
     @staticmethod
     def update_mdit(mdit: MarkdownIt) -> None:
-        # save original parser
+        """Patch the default parser to render references in semver order."""
         original_parse = mdit.parse
 
         def new_parse(src: str, env=None):
@@ -20,25 +22,22 @@ class HallmarkLinksExtension(ParserExtensionInterface):
                 env = {}
 
             # regex for `[label]: href "title"`
-            pattern = re.compile(
+            references_re = re.compile(
                 r'^\[([^\]]+)\]:\s*(\S+)(?:\s+"([^"]+)")?$',
                 re.MULTILINE,
             )
-
-            # collect defs
-            matches = pattern.findall(src)
+            matches = references_re.findall(src)
             refs = {
-                label: {"href": href, "title": title}
-                for label, href, title in matches
+                label: {"href": href, "title": title} for label, href, title in matches
             }
 
-            # remove them from the source
-            src = pattern.sub("", src).rstrip()
+            # remove references from the source
+            src = references_re.sub("", src).rstrip()
 
             # call original parse on the cleaned text
             tokens = original_parse(src, env)
 
-            # append a dummy hallmark_refs token at the end
+            # append a hallmark_refs token at the end
             if refs:
                 token = Token("hallmark_refs", "", 0)
                 token.meta = {"refs": refs}
