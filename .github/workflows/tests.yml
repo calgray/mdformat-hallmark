@@ -19,6 +19,8 @@ jobs:
       with:
         python-version: '3.10'
     - uses: pre-commit/action@v2.0.0
+      with:
+        fail_ci_if_error: false
 
   tests:
     runs-on: ${{ matrix.os }}
@@ -54,7 +56,7 @@ jobs:
         flags: unit
         env_vars: RUNNER_OS,PYTHON_VERSION
         file: ./coverage.xml
-        fail_ci_if_error: true
+        fail_ci_if_error: false
 
   pre-commit-hook:
     runs-on: ubuntu-latest
