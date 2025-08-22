@@ -5,7 +5,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "mdformat-hallmark"
 authors = [
-    { name = "Chris Sewell", email = "executablebooks@gmail.com" },
+    { name = "Callan Gray", email = "cal.j.gray@gmail.com" },
 ]
 readme = "README.md"
 classifiers = [
@@ -30,7 +30,7 @@ test = [
 dev = ["pre-commit"]
 
 [project.urls]
-Homepage = "https://github.com/executablebooks/mdformat-plugin"
+Homepage = "https://github.com/calgray/mdformat-hallmark"
 
 [project.entry-points."mdformat.parser_extension"]
 "hallmark" = "mdformat_hallmark:HallmarkLinksExtension"

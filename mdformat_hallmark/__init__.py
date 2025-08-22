@@ -1,4 +1,4 @@
-"""An mdformat plugin for compatibility with hallmark formatted Markdown and Common-Changelog."""
+"""An mdformat plugin for compatibility with hallmark formatted Markdown and Common Changelog."""
 
 __version__ = "0.0.1"
 
