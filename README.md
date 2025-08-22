@@ -8,7 +8,12 @@ An [mdformat](https://github.com/executablebooks/mdformat) plugin for compatibil
 
 ## Features
 
-- `hallmark` style reference formatting for changelogs with blank lines and sort by semantic version.
+- `remark-preset-lint-recommended` default lint style.
+- `remark` style definition formatting with:
+  - blank line seperator
+  - keep casing
+- `hallmark` style definition formatting for changelogs with:
+  - sort by semantic version
 
 ## Install
 

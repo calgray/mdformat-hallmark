@@ -34,7 +34,7 @@ dev = ["pre-commit"]
 Homepage = "https://github.com/calgray/mdformat-hallmark"
 
 [project.entry-points."mdformat.parser_extension"]
-"hallmark" = "mdformat_hallmark:HallmarkLinksExtension"
+"hallmark" = "mdformat_hallmark:HallmarkDefinitionsExtension"
 
 [tool.flit.sdist]
 include = []
