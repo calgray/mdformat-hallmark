@@ -121,5 +121,9 @@ class HallmarkDefinitionsExtension(ParserExtensionInterface):
             out.append(line)
         return "\n\n".join(out)
 
-    RENDERERS = {"remark_defs": _render_remark_defs}
+    @staticmethod
+    def _render_hr(node: RenderTreeNode, context: RenderContext) -> str:
+        return "---"
+
+    RENDERERS = {"remark_defs": _render_remark_defs, "hr": _render_hr}
     CHANGES_AST = True

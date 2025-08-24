@@ -7,6 +7,16 @@ then below add the expected output.
 - b [0.0.1][]
 * c [1.0.0]
 
+___
+
+| Name   | Age | City        |
+|--------|-----|-------------|
+| Alice  |  30 | New York    |
+| Bob    |  25 | San Francisco |
+| Carol  |  27 | London      |
+
+---
+
 [unused reference]: https://example.com
 [0.0.1]: https://example.com
 [link]: https://example.com
@@ -19,6 +29,16 @@ then below add the expected output.
 - b [0.0.1][]
 
 * c [1.0.0]
+
+---
+
+| Name  | Age | City          |
+| ----- | --- | ------------- |
+| Alice | 30  | New York      |
+| Bob   | 25  | San Francisco |
+| Carol | 27  | London        |
+
+---
 
 [0.0.1]: https://example.com
 
@@ -179,6 +199,16 @@ extra links changelog test
 - Commit [JIRA-2]
 - Commit [JIRA-1]
 
+___
+
+| Name  | Age | City          |
+| ----- | --- | ------------- |
+| Alice | 30  | New York      |
+| Bob   | 25  | San Francisco |
+| Carol | 27  | London        |
+
+___
+
 [JIRA-10]: https://example.com "ticket title"
 [JIRA-2]: https://example.com "ticket title"
 [JIRA-1]: https://example.com "ticket title"
@@ -200,6 +230,16 @@ extra links changelog test
 
 - Commit [JIRA-2]
 - Commit [JIRA-1]
+
+---
+
+| Name  | Age | City          |
+| ----- | --- | ------------- |
+| Alice | 30  | New York      |
+| Bob   | 25  | San Francisco |
+| Carol | 27  | London        |
+
+---
 
 [10.1.0]: https://example.com
 

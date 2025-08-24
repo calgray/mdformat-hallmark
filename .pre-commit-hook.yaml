@@ -1,6 +1,6 @@
-- id: mdformat-hallmark
-  name: mdformat-hallmark
-  description: "CommonMark compliant Markdown formatter"
+- id: mdformat
+  name: mdformat
+  description: "CommonMark and Hallmark compliant Markdown formatter"
   entry: mdformat
   language: python
   types: [markdown]
