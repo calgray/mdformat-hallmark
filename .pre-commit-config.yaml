@@ -27,3 +27,26 @@ repos:
     - flake8-bugbear
     - flake8-builtins
     - flake8-comprehensions
+
+# tests with hallmark
+- repo: local
+  hooks:
+    - id: mdformat
+      name: mdformat
+      entry: mdformat
+      language: python
+      types: [markdown]
+      files: pre-commit-test.md|CHANGELOG.md
+      stages: [pre-commit]
+- repo: local
+  hooks:
+    - id: hallmark
+      name: hallmark
+      entry: hallmark
+      args: [fix, --verbose]
+      language: node
+      types: [markdown]
+      files: pre-commit-test.md|CHANGELOG.md
+      stages: [pre-commit]
+      additional_dependencies:
+        - hallmark@5.0.1

@@ -5,6 +5,6 @@ and Common Changelog.
 
 __version__ = "0.0.1"
 
-from .hallmark_links_extension import HallmarkLinksExtension
+from .hallmark_definitions_extension import HallmarkDefinitionsExtension
 
-__all__ = ["HallmarkLinksExtension"]
+__all__ = ["HallmarkDefinitionsExtension"]

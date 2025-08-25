@@ -3,26 +3,48 @@ not changelog test
 This is the input Markdown test,
 then below add the expected output.
 
-- a [reference][]
-- b [0.0.1]
+- a [link]
+- b [0.0.1][]
 * c [1.0.0]
+
+___
+
+| Name   | Age | City        |
+|--------|-----|-------------|
+| Alice  |  30 | New York    |
+| Bob    |  25 | San Francisco |
+| Carol  |  27 | London      |
+
+---
 
 [unused reference]: https://example.com
 [0.0.1]: https://example.com
-[reference]: https://example.com
+[link]: https://example.com
 [1.0.0]: https://example.com
 .
 This is the input Markdown test,
 then below add the expected output.
 
-- a [reference]
-- b [0.0.1]
+- a [link]
+- b [0.0.1][]
 
 * c [1.0.0]
 
+---
+
+| Name  | Age | City          |
+| ----- | --- | ------------- |
+| Alice | 30  | New York      |
+| Bob   | 25  | San Francisco |
+| Carol | 27  | London        |
+
+---
+
 [0.0.1]: https://example.com
+
 [1.0.0]: https://example.com
-[reference]: https://example.com
+
+[link]: https://example.com
 .
 
 correct changelog test
@@ -160,7 +182,6 @@ unsorted changelog test
 [0.0.1]: https://example.com
 .
 
-
 extra links changelog test
 .
 # Changelog
@@ -169,16 +190,28 @@ extra links changelog test
 
 ### Added
 
-- Commit [JIRA-2]
+- Commit [JIRA-10]
 
-## [1.1.0] - 2025-01-01
+## [1.1.0][] - 2025-01-01
 
 ### Added
 
+- Commit [JIRA-2]
 - Commit [JIRA-1]
 
-[JIRA-2]: https://example.com
-[JIRA-1]: https://example.com
+___
+
+| Name  | Age | City          |
+| ----- | --- | ------------- |
+| Alice | 30  | New York      |
+| Bob   | 25  | San Francisco |
+| Carol | 27  | London        |
+
+___
+
+[JIRA-10]: https://example.com "ticket title"
+[JIRA-2]: https://example.com "ticket title"
+[JIRA-1]: https://example.com "ticket title"
 
 [2.10.0]: https://example.com
 [10.1.0]: https://example.com
@@ -189,18 +222,32 @@ extra links changelog test
 
 ### Added
 
-- Commit [JIRA-2]
+- Commit [JIRA-10]
 
-## [1.1.0] - 2025-01-01
+## [1.1.0][] - 2025-01-01
 
 ### Added
 
+- Commit [JIRA-2]
 - Commit [JIRA-1]
+
+---
+
+| Name  | Age | City          |
+| ----- | --- | ------------- |
+| Alice | 30  | New York      |
+| Bob   | 25  | San Francisco |
+| Carol | 27  | London        |
+
+---
 
 [10.1.0]: https://example.com
 
 [2.10.0]: https://example.com
 
-[jira-1]: https://example.com
-[jira-2]: https://example.com
+[JIRA-1]: https://example.com "ticket title"
+
+[JIRA-10]: https://example.com "ticket title"
+
+[JIRA-2]: https://example.com "ticket title"
 .

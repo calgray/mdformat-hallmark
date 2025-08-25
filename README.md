@@ -1,14 +1,19 @@
 # mdformat-hallmark
 
-[![Build Status](https://github.com/calgray/mdformat-hallmark/actions/workflows/tests.yml/badge.svg?branch=master)](<https://github.com/calgray/mdformat-hallmark/actions?query=workflow%3ATests+branch%3Amaster+event%3Apush>)
+[![Build Status](https://github.com/calgray/mdformat-hallmark/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/calgray/mdformat-hallmark/actions?query=workflow%3ATests+branch%3Amaster+event%3Apush)
 [![codecov.io](https://codecov.io/gh/calgray/mdformat-hallmark/branch/master/graph/badge.svg)](https://codecov.io/gh/calgray/mdformat-hallmark)
-[![PyPI version](https://badge.fury.io/py/mdformat-hallmark.svg)](<https://badge.fury.io/py/mdformat-hallmark>)
+[![PyPI version](https://badge.fury.io/py/mdformat-hallmark.svg)](https://badge.fury.io/py/mdformat-hallmark)
 
-An [mdformat](https://github.com/executablebooks/mdformat) plugin for compatibility with [hallmark](https://github.com/vweevers/hallmark) formatted Markdown and [Common Changelog](https://common-changelog.org/) that allows both formatters and linters to simultaneously pass for quality assurance.
+An [mdformat](https://github.com/executablebooks/mdformat) plugin for compatibility with [hallmark](https://github.com/vweevers/hallmark), [MarkdownStyleGuide](https://cirosantilli.com/markdown-style-guide) and [Common Changelog](https://common-changelog.org/) that allows both formatters and linters to simultaneously pass for quality assurance.
 
 ## Features
 
-- `hallmark` style reference formatting for changelogs with blank lines and sort by semantic version.
+- `remark-preset-lint-markdown-style-guide` style compatibility.
+- `hallmark` style formatting of definitions at end of the document with:
+  - blank line seperators
+  - keep label casing
+  - sort first by semantic version labels
+  - sort second by alphanumeric labels
 
 ## Install
 
@@ -27,7 +32,29 @@ After installing the plugin, run `mdformat` for Markdown files including Common 
 mdformat README.md CHANGELOG.md
 
 # with extension explicitly required
-mdformat --extensions hallmark README.md CHANGELOG.md
+mdformat --extensions hallmark --extensions tables README.md CHANGELOG.md
+```
+
+## Pre-Commit Usage
+
+```yaml
+repos:
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.19
+    hooks:
+      - id: mdformat
+        additional_dependencies:
+          - mdformat-hallmark
+```
+
+for latest developement version:
+
+```yaml
+repos:
+  - repo: https://github.com/calgray/mdformat-hallmark
+    rev: master
+    hooks:
+      - id: mdformat
 ```
 
 ## Development
@@ -85,10 +112,3 @@ flit publish
 or trigger the GitHub Action job, by creating a release with a tag equal to the version, e.g. `v0.0.1`.
 
 Note, this requires generating an API key on PyPi and adding it to the repository `Settings/Secrets`, under the name `PYPI_KEY`.
-
-[ci-badge]: https://github.com/executablebooks/mdformat-hallmark/workflows/CI/badge.svg?branch=master
-[ci-link]: https://github.com/executablebooks/mdformat/actions?query=workflow%3ACI+branch%3Amaster+event%3Apush
-[cov-badge]: https://codecov.io/gh/executablebooks/mdformat-hallmark/branch/master/graph/badge.svg
-[cov-link]: https://codecov.io/gh/executablebooks/mdformat-hallmark
-[pypi-badge]: https://img.shields.io/pypi/v/mdformat-hallmark.svg
-[pypi-link]: https://pypi.org/project/mdformat-hallmark
